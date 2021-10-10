@@ -614,7 +614,7 @@ def ad_pos():
             continue
         else:
             ad_pos_list = []
-            ad_pos_list = [1,2,3,4,5,6] #上下左右中クリック虫の5種類の広告表示位置
+            ad_pos_list = [1,2,3,4,5,6] #上下左右中クリック無視の5種類の広告表示位置
             random.shuffle(ad_pos_list)#表示位置の順番をシャッフル
             for ad_pos in ad_pos_list:
                 if ad_now > 600:#10分間
