@@ -1,5 +1,4 @@
 # 広告表示のみ行うプログラム
-
 import sys
 import os.path
 import csv
@@ -23,13 +22,13 @@ SAVE_DIR = RESULT_DIR + sys.argv[1]
 ##ここから広告表示プログラムとして追加
 #広告表示位置を変更するフラグ
 ad_start = 0
-flag = 0
+flag = 0#今いらないかも
 im_sikaku_list = []#四角画像のpathを格納
 im_yoko_list = []#横長画像
 sikaku_dir = "image\\small_image\\sikaku\\"
 yoko_dir = "image\\small_image\\yokonaga\\"
 close_dir = "image\\small_image\\close\\"
-back = "white"
+back = "white"#画像ウィンドウの背景
 
 ######### 定数定義終了 仮でTrueにしている。実験システムと合わせるときには全てFalseにする
 flag_pose = True#False #openposeキャプチャ取得しているかどうかのフラグ
@@ -123,7 +122,7 @@ def change_fig(mas,canvas,item,img_path,img):
     new_img = Image.open(img_path)
     new_img = ImageTk.PhotoImage(new_img,master=mas)
     canvas.itemconfig(item,image=new_img)#itemを差し替え
-    time.sleep(10)#ウィンドウ非表示の時間
+    time.sleep(10)#ウィンドウ非表示の時間#
     mas.deiconify()#ウィンドウを再表示する     
     time.sleep(10)#ウィンドウ表示の時間
 
